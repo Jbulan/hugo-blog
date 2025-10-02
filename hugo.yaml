@@ -21,13 +21,18 @@ languages:
     weight: 1
 hasCJKLanguage: true # 自动检测中日韩语言，优化字数统计和摘要
 enableEmoji: true # 启用 Emoji 表情支持
-enableGitInfo: false # 是否启用 Git 信息（如最后更新时间）
+enableGitInfo: true # 是否启用 Git 信息（如最后更新时间）
 
 # 构建行为设置
 enableRobotsTXT: true # 允许生成 robots.txt，引导搜索引擎抓取
 buildDrafts: false # 是否构建草稿
 buildFuture: false # 是否构建未来的文章
 buildExpired: false # 是否构建过期的文章
+
+# 永久链接配置
+permalinks:
+  posts: "/posts/:slug/" # 为 posts 分区下的文章指定 URL 格式
+
 
 # =====================================================================================
 # 输出与性能 (Output & Performance)
