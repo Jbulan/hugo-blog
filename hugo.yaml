@@ -1,3 +1,214 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+# =====================================================================================
+# 站点核心配置 (Core Site Configuration)
+# =====================================================================================
+
+baseURL: "https://windows.zapus-godzilla.ts.net/" # 站点域名
+title: "嚼不烂的个人博客" # 网站标题
+theme: PaperMod # 主题名称
+
+# 分页设置 (Hugo v0.128.0+ 使用新格式)
+pagination:
+  pagerSize: 10 # 每页显示的文章数量
+
+# 语言与内容设置
+languageCode: "zh-cn" # 网站语言
+defaultContentLanguage: "zh-cn" # 默认内容语言
+# 完整启用中文翻译
+languages:
+  zh-cn:
+    languageName: "简体中文"
+    languageDirection: "ltr"
+    weight: 1
+hasCJKLanguage: true # 自动检测中日韩语言，优化字数统计和摘要
+enableEmoji: true # 启用 Emoji 表情支持
+enableGitInfo: false # 是否启用 Git 信息（如最后更新时间）
+
+# 构建行为设置
+enableRobotsTXT: true # 允许生成 robots.txt，引导搜索引擎抓取
+buildDrafts: false # 是否构建草稿
+buildFuture: false # 是否构建未来的文章
+buildExpired: false # 是否构建过期的文章
+
+# =====================================================================================
+# 输出与性能 (Output & Performance)
+# =====================================================================================
+
+# 静态文件压缩
+minify:
+  disableXML: true # 不压缩 XML 文件
+  minifyOutput: true # 压缩最终输出的 HTML/CSS/JS 文件
+
+# 定义输出格式，为 RSS 和 JSON 搜索做准备
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # 为搜索功能生成索引
+
+# =====================================================================================
+# 主题参数配置 (Theme `params` Configuration)
+# =====================================================================================
+
+params:
+  # --- 常规信息 ---
+  env: production # 设置为 "production" 以启用 SEO、社交分享等功能
+  title: "嚼不烂的个人博客" # 网站标题（可与顶层 title 保持一致）
+  description: "一个记录技术探索、学习笔记和奇思妙想的地方。" # 网站描述，用于 SEO
+  author: "嚼不烂" # 网站作者
+  # keywords: [技术, 博客, 杂谈, Linux, 网络安全] # 关键词，大部分搜索引擎已不重视
+  images: ["papermod-cover.png"] # 社交媒体分享时显示的预览图 (需将图片放在 static 目录下)
+  DateFormat: "2006-01-02" # 全站日期格式
+
+  # --- UI/UX 界面与功能 ---
+  defaultTheme: auto # 默认主题模式: auto, dark, light
+  disableThemeToggle: false # 是否显示主题切换按钮
+  ShowReadingTime: true # 是否显示文章阅读时间
+  ShowShareButtons: true # 是否显示社交分享按钮
+  ShowPostNavLinks: true # 是否显示文章末尾的“上一篇/下一篇”导航
+  ShowBreadCrumbs: true # 是否显示面包屑导航
+  ShowCodeCopyButtons: true # 是否显示代码块的“复制”按钮
+  ShowWordCount: true # 是否显示文章字数
+  disableScrollToTop: false # 是否禁用“返回顶部”按钮
+  comments: true # 是否全局启用评论系统 (可被文章页的设置覆盖)
+  giscus:
+    repo: "Jbulan/hugo-blog" # GitHub用户名/仓库名
+    repoId: "R_kgDOP7DUUg"     # 从giscus官网生成的ID
+    category: "Comments"          # 创建的分类名
+    categoryId: "DIC_kwDOP7DUUs4CwK1u"  # 从giscus官网生成的ID
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "top"
+    theme: "preferred_color_scheme" # 主题
+    lang: "zh-CN"
+    loading: "lazy"
+
+  # --- 网站图标 (Favicon) ---
+  # 图标在 static 目录下
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
+
+  # --- 网站左上角 Logo 或文字 ---
+  label:
+    text: "嚼不烂的个人博客" # 不使用图片 Logo，将显示此文字
+    # icon: "/logo.png" # 图片 Logo 路径 (需放在 static 目录下)
+    # iconHeight: 35
+
+  # --- 主页样式 ---
+  # homeInfoParams 模式 (默认启用)
+  homeInfoParams:
+    Title: "你好"
+    Content: "这里是「嚼不烂的个人博客」，一个记录技术探索、学习笔记和奇思妙想的地方。"
+
+  # profileMode 模式 (个人简介卡片模式，如需使用将 enabled 设为 true)
+  profileMode:
+    enabled: false
+    title: "嚼不烂的个人博客"
+    subtitle: "技术探索 | 学习笔记 | 生活点滴"
+    imageUrl: "/avatar.png" # 头像路径 (需放在 static 目录下)
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: 文章
+        url: "/archives"
+      - name: 关于
+        url: "/about"
+
+  # --- 社交链接 ---
+  socialIcons:
+    - name: github
+      url: "https://github.com/Jbulan"
+    - name: email
+      url: "mailto:jiaobulan@foxmail.com"
+    - name: bilibili
+      url: "https://space.bilibili.com/645955557?spm_id_from=333.1007.0.0"
+    # - name: x
+    #   url: "https://x.com/<你的用户名>"
+
+  # --- 文章与 SEO ---
+  cover: # 文章封面图设置
+    hidden: true # 在列表中和文章页隐藏封面图，但为 SEO 保留
+    hiddenInList: true # 在列表页隐藏封面图
+    hiddenInSingle: true # 在文章页隐藏封面图
+
+  # editPost: # 在文章页显示“编辑此页”的链接
+  #   URL: "https://github.com/Jbulan/Hugo-Blog/content"
+  #   Text: "在 GitHub 上编辑"
+  #   appendFilePath: true
+
+  # --- 搜索功能 (Fuse.js) ---
+  fuseOpts:
+    isCaseSensitive: false # 搜索时是否区分大小写
+    shouldSort: true # 是否根据匹配度对搜索结果进行排序
+    location: 0 # 控制“模糊搜索”的程度
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0 # 最小匹配字符数
+    keys: ["title", "permalink", "summary", "content"] # 在文章的哪些字段里进行搜索
+
+# =====================================================================================
+# 导航菜单 (Navigation Menu)
+# =====================================================================================
+
+menu:
+  main:
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 10
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 30
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 40
+
+# =====================================================================================
+# Markdown 与代码高亮 (Markdown & Syntax Highlighting)
+# =====================================================================================
+
+markup:
+  # Hugo 内置的 Chroma 代码高亮配置
+  highlight:
+    noClasses: false # 建议为 false，以便使用 CSS 主题
+    # codeFences: true # 启用通过 ``` (三个反引号) 来创建代码块的功能
+    # guessSyntax: true # 没有指定代码语言时是否让 Hugo 尝试猜测语言
+    lineNos: true # 是否在代码块左侧显示行号
+    style: monokai # 代码高亮的颜色主题
+
+  # Markdown 渲染器配置
+  goldmark:
+    renderer:
+      unsafe: true # 允许在 Markdown 中使用原始 HTML
+
+  # 目录 (Table of Contents) 配置
+  tableOfContents:
+    startLevel: 2 # 从 H2 标题开始生成目录
+    endLevel: 4 # 到 H4 标题结束
+    ordered: false # 使用无序列表 (圆点)
+
+# =====================================================================================
+# 隐私与服务 (Privacy & Services)
+# =====================================================================================
+# 增强隐私保护，禁用可能追踪用户的第三方服务
+
+privacy:
+  vimeo:
+    disabled: true
+  twitter:
+    disabled: true
+  instagram:
+    disabled: true
+  youtube:
+    disabled: true
