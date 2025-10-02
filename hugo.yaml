@@ -70,19 +70,6 @@ params:
   ShowWordCount: true # 是否显示文章字数
   disableScrollToTop: false # 是否禁用“返回顶部”按钮
   comments: true # 是否全局启用评论系统 (可被文章页的设置覆盖)
-  giscus:
-    repo: "Jbulan/hugo-blog" # GitHub用户名/仓库名
-    repoId: "R_kgDOP7DUUg"     # 从giscus官网生成的ID
-    category: "Comments"          # 创建的分类名
-    categoryId: "DIC_kwDOP7DUUs4CwK1u"  # 从giscus官网生成的ID
-    mapping: "pathname"
-    strict: "0"
-    reactionsEnabled: "1"
-    emitMetadata: "0"
-    inputPosition: "top"
-    theme: "preferred_color_scheme" # 主题
-    lang: "zh-CN"
-    loading: "lazy"
 
   # --- 网站图标 (Favicon) ---
   # 图标在 static 目录下
