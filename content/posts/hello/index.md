@@ -1,16 +1,21 @@
 ---
 title: "开场白"
-description: "记录我搭建 Hugo 博客的开端与初衷。"
 date: 2025-09-26T23:50:00+08:00
 lastmod: 2025-09-26T23:50:00+08:00
+author: "嚼不烂" 
+
+slug: "hello" 
+description: "嚼不烂的个人博客" 
+
 categories:
-  - "日常杂谈"
+  - "日常杂谈" 
 tags:
   - "博客"
-  - "杂谈"
-comments: true
-showToc: true
-draft: false
+  - "杂谈" 
+
+draft: false 
+showToc: false 
+comments: true 
 ---
 
 ```python
