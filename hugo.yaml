@@ -61,7 +61,7 @@ params:
   description: "一个记录技术探索、学习笔记和奇思妙想的地方。" # 网站描述，用于 SEO
   author: "嚼不烂" # 网站作者
   # keywords: [技术, 博客, 杂谈, Linux, 网络安全] # 关键词，大部分搜索引擎已不重视
-  images: ["papermod-cover.png"] # 社交媒体分享时显示的预览图 (需将图片放在 static 目录下)
+  images: ["website-cover.png"] # 社交媒体分享时显示的预览图 (需将图片放在 static 目录下)
   DateFormat: "2006-01-02" # 全站日期格式
 
   # --- UI/UX 界面与功能 ---
@@ -83,7 +83,6 @@ params:
     favicon16x16: "/favicon-16x16.png"
     favicon32x32: "/favicon-32x32.png"
     apple_touch_icon: "/apple-touch-icon.png"
-    safari_pinned_tab: "/safari-pinned-tab.svg"
 
   # --- 网站左上角 Logo 或文字 ---
   label:
@@ -99,8 +98,8 @@ params:
 
   # profileMode 模式 (个人简介卡片模式，如需使用将 enabled 设为 true)
   profileMode:
-    enabled: false
-    title: "嚼不烂的个人博客"
+    enabled: true
+    title: "嚼不烂"
     subtitle: "技术探索 | 学习笔记 | 生活点滴"
     imageUrl: "/avatar.png" # 头像路径 (需放在 static 目录下)
     imageWidth: 120
