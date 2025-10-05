@@ -2,7 +2,7 @@
 # 站点核心配置 (Core Site Configuration)
 # =====================================================================================
 
-baseURL: "https://windows.zapus-godzilla.ts.net/" # 站点域名
+baseURL: "https://jiaobulan.pages.dev/" # 站点域名
 title: "嚼不烂的个人博客" # 网站标题
 theme: PaperMod # 主题名称
 
