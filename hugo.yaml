@@ -61,7 +61,7 @@ params:
   description: "一个记录技术探索、学习笔记和奇思妙想的地方。" # 网站描述，用于 SEO
   author: "嚼不烂" # 网站作者
   # keywords: [技术, 博客, 杂谈, Linux, 网络安全] # 关键词，大部分搜索引擎已不重视
-  images: ["/img/website-cover.png"] # 社交媒体分享时显示的预览图 (需将图片放在 /assets 目录下)
+  images: ["/img/website-cover.jpeg"] # 社交媒体分享时显示的预览图 (需将图片放在 /assets 目录下)
   DateFormat: "2006-01-02" # 全站日期格式
 
   # --- UI/UX 界面与功能 ---
