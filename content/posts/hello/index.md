@@ -31,6 +31,8 @@ hello_world()
 
 下面我们看正文.
 
+![美图](https://img.jiaobulan.com/img/2025/10/c8d458d2a5d3fcce780707255096edb1.png)
+
 **一.前言**
 
 如果时间算是成本的话,那我的标题可能起错了.
