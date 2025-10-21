@@ -101,7 +101,7 @@ params:
 
   # profileMode 模式 (个人简介卡片模式，如需使用将 enabled 设为 true)
   profileMode:
-    enabled: true
+    enabled: false
     title: "嚼不烂"
     subtitle: "技术探索 | 学习笔记 | 生活点滴"
     imageUrl: "/img/avatar.png" # 头像路径 (需放在 /assets 目录下)

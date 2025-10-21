@@ -15,5 +15,11 @@ tags:
 draft: false # 默认发布状态
 showToc: false # 默认不显示目录
 comments: true # 默认允许评论
+
+cover:
+  image: "" # 封面图片 URL
+  alt: "" # 图片的替代文本
+  caption: "" # 填写图片的说明（可选）
+  relative: false # 使用图床等外部图片时，此项必须为 false
 ---
 
