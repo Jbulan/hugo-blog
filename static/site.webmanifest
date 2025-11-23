@@ -37,9 +37,9 @@
       "label": "博客桌面版截图"
     },
     {
-      "src": "/img/screenshots/screenshot-mobile.png",
+      "src": "/img/screenshots/screenshot-mobile.jpg",
       "sizes": "540x720",
-      "type": "image/png",
+      "type": "image/jpeg",
       "form_factor": "narrow",
       "label": "博客移动版截图"
     }
